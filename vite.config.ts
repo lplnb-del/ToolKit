@@ -17,18 +17,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: './',  // 关键配置：使用相对路径，支持任意子路径部署
+  base: './',
   build: {
-    target: 'esnext',
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.includes('element-plus')) return 'element-plus'
-          if (id.includes('crypto-js')) return 'crypto'
-          if (id.includes('qrcode') || id.includes('jsqr')) return 'qrcode'
-          return null
-        }
-      }
-    }
+    target: 'esnext'
   }
 })

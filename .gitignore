@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
-# dist  # 注释掉，因为 GitHub Pages 需要 dist 文件夹
+dist
 dist-ssr
 coverage
 *.local
